@@ -10,7 +10,7 @@
     gap: 10px;
 }
 
-.header{grid-area: header; border-color: aquamarine;}
-.sidebar{grid-area: sidebar;border-color: aqua;}
-.main-content{grid-area: main-content;border-color: bisque;}
-.footer{grid-area: footer;border-color: blueviolet;}
+.header{grid-area: header; border-style: solid;background-color: aqua;}
+.sidebar{grid-area: sidebar;border-style: solid;background-color: azure;}
+.main-content{grid-area: main-content;border-style: solid;background-color: bisque;}
+.footer{grid-area: footer;border-style: solid;background-color: beige;}
