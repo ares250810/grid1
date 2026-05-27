@@ -1,0 +1,16 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 150px 3fr 100px;
+    grid-template-areas: 
+    "header header header"
+    "sidebar main-content panel"
+    "footer footer footer"
+    ;
+    gap: 10px;
+}
+
+.header{grid-area: header; border-color: aquamarine;}
+.sidebar{grid-area: sidebar;border-color: aqua;}
+.main-content{grid-area: main-content;border-color: bisque;}
+.footer{grid-area: footer;border-color: blueviolet;}
