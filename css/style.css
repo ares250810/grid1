@@ -1,7 +1,7 @@
 .grid-container{
     display: grid;
     grid-template-columns: minmax(100px,1fr) minmax(0,2fr) minmax(100px,1fr);
-    grid-template-rows: 50px minmax(0,3fr) 100px;
+    grid-template-rows: 50px minmax(0,3fr) 50px;
     grid-template-areas: 
     "header header header"
     "sidebar main-content panel"
@@ -18,7 +18,7 @@
     text-decoration: none;
     text-align: justify;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: minmax(0,1fr) minmax(0,2fr) minmax(0,1fr) minmax(0,1fr);
     grid-template-rows: 1fr;
     grid-template-areas: 
     "logo nav search user"
@@ -38,6 +38,7 @@
     "chart-principal"
     "tabla"
     "mini-card";
+    min-width: 0;
     gap: 1px;
 }
 .panel{grid-area: panel;border-style: solid;background-color: brown;}
@@ -47,8 +48,7 @@
     padding: 10px;
     gap: 10px;
 }
-.sidebar-menu{
-    display: inline-block;
+.sidebar-menu{    
     text-decoration: none;
     font-weight: bold;
     text-align: inherit;
@@ -57,16 +57,21 @@
     grid-area: kpi-grid;
     border-style: solid;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(auto-fit,minmax(0,4fr));
     gap: 1px;
 }
 .card{
     border-style: solid;
-    text-align: center, justify; 
+    text-align: center; 
     background-color: beige;   
 }
 .chart-principal{grid-area: chart-principal;border-style: solid;}
-.tabla{grid-area: tabla;border-style: solid;}
+.tabla{
+    grid-area: tabla;
+    border-style: solid;
+    overflow: auto;
+    min-width: 0;
+}
 .mini-card{
     grid-area: mini-card;
     border-style: solid;
